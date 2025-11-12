@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>你的名字 — 个人主页</title>
+  <meta name="description" content="这是我的个人网站：项目展示、关于我、联系方式。" />
+
+  <!-- 社交分享预览（可改） -->
+  <meta property="og:title" content="你的名字 — 个人主页">
+  <meta property="og:description" content="欢迎来到我的个人网站！">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://picsum.photos/1200/630?random=1"> <!-- 可换成本地或真实图片 -->
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#">你的名字</a>
+      <nav aria-label="主导航">
+        <ul class="nav-list">
+          <li><a href="#projects">项目</a></li>
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#contact">联系我</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 英雄区 -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">嗨，我是 <span class="accent">你的名字</span> 👋</h1>
+        <p class="subtitle">一段简短的自我介绍：例如「前端工程师 / 数据分析 / 游戏开发」。</p>
+        <div class="cta">
+          <a class="btn" href="#projects">查看项目</a>
+          <a class="btn btn-ghost" href="mailto:you@example.com">邮件联系</a>
+        </div>
+
+        <ul class="social">
+          <li><a aria-label="GitHub" href="https://github.com/你的GitHub用户名" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><a aria-label="LinkedIn" href="#" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          <li><a aria-label="Twitter/X" href="#" target="_blank" rel="noreferrer">X</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 项目区 -->
+    <section id="projects" class="section container" aria-labelledby="projects-title">
+      <h2 id="projects-title">精选项目</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>项目 A</h3>
+          <p>一句话介绍你的项目，解决了什么问题，用到哪些技术。</p>
+          <div class="card-actions">
+            <a class="btn btn-small" href="#" target="_blank" rel="noreferrer">在线预览</a>
+            <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">源码</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>项目 B</h3>
+          <p>一句话介绍你的项目，突出亮点和成果。</p>
+          <div class="card-actions">
+            <a class="btn btn-small" href="#" target="_blank" rel="noreferrer">在线预览</a>
+            <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">源码</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>项目 C</h3>
+          <p>一句话介绍你的项目，技术栈/数据/可视化等。</p>
+          <div class="card-actions">
+            <a class="btn btn-small" href="#" target="_blank" rel="noreferrer">在线预览</a>
+            <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">源码</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section container" aria-labelledby="about-title">
+      <h2 id="about-title">关于我</h2>
+      <div class="about">
+        <img class="avatar" src="https://picsum.photos/240?grayscale" alt="你的头像（替换为真实图片）" />
+        <div>
+          <p>这里写一段更详细的个人简介：擅长方向、经历、正在做的事情。</p>
+          <ul class="bullets">
+            <li>技能：HTML/CSS/JS、Python、C++（按需修改）</li>
+            <li>领域：Web、数据可视化、游戏开发</li>
+            <li>正在寻找：实习/全职/合作机会</li>
+          </ul>
+          <a class="btn" href="#" target="_blank" rel="noreferrer">下载简历（PDF）</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section container" aria-labelledby="contact-title">
+      <h2 id="contact-title">联系我</h2>
+      <p>欢迎通过以下方式联系我：</p>
+      <ul class="contact-list">
+        <li>邮箱：<a href="mailto:you@example.com">you@example.com</a></li>
+        <li>GitHub：<a href="https://github.com/你的GitHub用户名" target="_blank" rel="noreferrer">github.com/你的GitHub用户名</a></li>
+        <li>微信/其它：可在此补充</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 你的名字 · 用 GitHub Pages 构建</p>
+    </div>
+    <script>
+      // 很小的增强：自动年份
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
